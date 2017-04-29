@@ -35,12 +35,15 @@ public class Main extends Application {
         StackPane root = new StackPane();
         Scene scene = new Scene(root, 300, 250);
 
-        ListView<String> list = new ListView<>();
-        ObservableList<String> items =FXCollections.observableArrayList (
-                "Single", "Double", "Suite", "Family App");
-        list.setItems(items);
+        TreeItem<String> rootItem = new TreeItem<> ("Inbox");
+        rootItem.setExpanded(true);
+        for (int i = 1; i < 6; i++) {
+            TreeItem<String> item = new TreeItem<> ("Message" + i);
+            rootItem.getChildren().add(item);
+        }
+        TreeView<String> tree = new TreeView<> (rootItem);
 
-        root.getChildren().add(list);
+        root.getChildren().add(tree);
 
         primaryStage.setScene(scene);
         primaryStage.show();
