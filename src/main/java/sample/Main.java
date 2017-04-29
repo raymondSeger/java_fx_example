@@ -34,14 +34,12 @@ public class Main extends Application {
         StackPane root = new StackPane();
         Scene scene = new Scene(root, 300, 250);
 
-        ChoiceBox cb = new ChoiceBox();
-        cb.setItems(FXCollections.observableArrayList(
-                "New Document", "Open ",
-                new Separator(), "Save", "Save as")
-        );
-        cb.setTooltip(new Tooltip("Select one"));
+        ScrollBar sc = new ScrollBar();
+        sc.setMin(0);
+        sc.setMax(100);
+        sc.setValue(50);
 
-        root.getChildren().add(cb);
+        root.getChildren().add(sc);
 
         primaryStage.setScene(scene);
         primaryStage.show();
