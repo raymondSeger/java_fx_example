@@ -17,6 +17,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
 
 
@@ -35,11 +36,11 @@ public class Main extends Application {
         StackPane root = new StackPane();
         Scene scene = new Scene(root, 300, 250);
 
-        ProgressBar pb = new ProgressBar(0.6);
-        ProgressIndicator pi = new ProgressIndicator(0.6);
+        final HTMLEditor htmlEditor = new HTMLEditor();
+        htmlEditor.setPrefHeight(245);
 
         // root.getChildren().add(pb);
-        root.getChildren().add(pi);
+        root.getChildren().add(htmlEditor);
 
         primaryStage.setScene(scene);
         primaryStage.show();
