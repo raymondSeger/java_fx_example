@@ -35,15 +35,17 @@ public class Main extends Application {
         StackPane root = new StackPane();
         Scene scene = new Scene(root, 300, 250);
 
-        TreeItem<String> rootItem = new TreeItem<> ("Inbox");
-        rootItem.setExpanded(true);
-        for (int i = 1; i < 6; i++) {
-            TreeItem<String> item = new TreeItem<> ("Message" + i);
-            rootItem.getChildren().add(item);
-        }
-        TreeView<String> tree = new TreeView<> (rootItem);
+        Slider slider = new Slider();
+        slider.setMin(0);
+        slider.setMax(100);
+        slider.setValue(40);
+        slider.setShowTickLabels(true);
+        slider.setShowTickMarks(true);
+        slider.setMajorTickUnit(50);
+        slider.setMinorTickCount(5);
+        slider.setBlockIncrement(10);
 
-        root.getChildren().add(tree);
+        root.getChildren().add(slider);
 
         primaryStage.setScene(scene);
         primaryStage.show();
