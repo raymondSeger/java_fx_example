@@ -19,6 +19,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.web.HTMLEditor;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 
@@ -38,10 +39,11 @@ public class Main extends Application {
         Scene scene = new Scene(root, 300, 250);
 
         //Color constant set as the currently selected color
-        Pagination pagination3 = new Pagination(5, 2);
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Resource File");
+        fileChooser.showOpenDialog(primaryStage);
 
         // root.getChildren().add(pb);
-        root.getChildren().add(pagination3);
 
         primaryStage.setScene(scene);
         primaryStage.show();
