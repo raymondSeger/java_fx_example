@@ -35,17 +35,11 @@ public class Main extends Application {
         StackPane root = new StackPane();
         Scene scene = new Scene(root, 300, 250);
 
-        Slider slider = new Slider();
-        slider.setMin(0);
-        slider.setMax(100);
-        slider.setValue(40);
-        slider.setShowTickLabels(true);
-        slider.setShowTickMarks(true);
-        slider.setMajorTickUnit(50);
-        slider.setMinorTickCount(5);
-        slider.setBlockIncrement(10);
+        ProgressBar pb = new ProgressBar(0.6);
+        ProgressIndicator pi = new ProgressIndicator(0.6);
 
-        root.getChildren().add(slider);
+        // root.getChildren().add(pb);
+        root.getChildren().add(pi);
 
         primaryStage.setScene(scene);
         primaryStage.show();
