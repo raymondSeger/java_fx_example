@@ -66,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="211">
-              <caret line="40" column="50" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="50" />
+              <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -723,12 +723,12 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1493021696285" duration="431000" />
       <workItem from="1493086182264" duration="19000" />
-      <workItem from="1493426703771" duration="6390000" />
+      <workItem from="1493426703771" duration="7001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8142000" />
+    <option name="totallyTimeSpent" value="8753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -914,7 +914,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
-          <caret line="40" column="50" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="50" />
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
