@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -36,11 +37,11 @@ public class Main extends Application {
         StackPane root = new StackPane();
         Scene scene = new Scene(root, 300, 250);
 
-        final HTMLEditor htmlEditor = new HTMLEditor();
-        htmlEditor.setPrefHeight(245);
+        //Color constant set as the currently selected color
+        ColorPicker colorPicker2 = new ColorPicker(Color.BLUE);
 
         // root.getChildren().add(pb);
-        root.getChildren().add(htmlEditor);
+        root.getChildren().add(colorPicker2);
 
         primaryStage.setScene(scene);
         primaryStage.show();
