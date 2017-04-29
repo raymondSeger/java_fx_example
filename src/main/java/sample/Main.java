@@ -3,6 +3,7 @@ package sample;
 import com.sun.javafx.css.Stylesheet;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -34,12 +35,12 @@ public class Main extends Application {
         StackPane root = new StackPane();
         Scene scene = new Scene(root, 300, 250);
 
-        ScrollBar sc = new ScrollBar();
-        sc.setMin(0);
-        sc.setMax(100);
-        sc.setValue(50);
+        ListView<String> list = new ListView<>();
+        ObservableList<String> items =FXCollections.observableArrayList (
+                "Single", "Double", "Suite", "Family App");
+        list.setItems(items);
 
-        root.getChildren().add(sc);
+        root.getChildren().add(list);
 
         primaryStage.setScene(scene);
         primaryStage.show();
