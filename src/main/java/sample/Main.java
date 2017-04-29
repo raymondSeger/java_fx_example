@@ -11,8 +11,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -31,45 +33,29 @@ public class Main extends Application {
         */
         primaryStage.setTitle("JavaFX Welcome");
 
-        GridPane grid = new GridPane();
-        grid.setAlignment(Pos.CENTER);
-        grid.setHgap(10);
-        grid.setVgap(10);
-        grid.setPadding(new Insets(25, 25, 25, 25));
+        StackPane root = new StackPane();
+        Scene scene = new Scene(root, 300, 250);
 
-        Scene scene = new Scene(grid, 300, 275);
+        Label label = new Label ("Values");
+        label.setFont(new Font("Cambria", 32));
+        label.setRotate(270);
+        label.setTranslateY(50);
 
-        Text scenetitle = new Text("Welcome");
-        scenetitle.setId("welcome-text");
-        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
-        grid.add(scenetitle, 0, 0, 2, 1);
-
-        Label userName = new Label("User Name:");
-        grid.add(userName, 0, 1);
-
-        TextField userTextField = new TextField();
-        grid.add(userTextField, 1, 1);
-
-        Label pw = new Label("Password:");
-        grid.add(pw, 0, 2);
-
-        PasswordField pwBox = new PasswordField();
-        grid.add(pwBox, 1, 2);
-
-        final Button btn = new Button("Sign in");
-        HBox hbBtn = new HBox(10);
-        hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
-        hbBtn.getChildren().add(btn);
-        grid.add(hbBtn, 1, 4);
-
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent event) {
-                btn.setText("Sign in button pressed");
-            }
+        Label label3 = new Label("A label that needs to be wrapped");
+        label3.setWrapText(true);
+        label3.setOnMouseEntered((MouseEvent e) -> {
+            label3.setScaleX(1.5);
+            label3.setScaleY(1.5);
+        });
+        label3.setOnMouseExited((MouseEvent e) -> {
+            label3.setScaleX(1);
+            label3.setScaleY(1);
         });
 
-        primaryStage.setScene(scene);
+        root.getChildren().add(label);
+        root.getChildren().add(label3);
 
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 
