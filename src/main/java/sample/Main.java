@@ -38,10 +38,10 @@ public class Main extends Application {
         Scene scene = new Scene(root, 300, 250);
 
         //Color constant set as the currently selected color
-        DatePicker checkInDatePicker = new DatePicker();
+        Pagination pagination3 = new Pagination(5, 2);
 
         // root.getChildren().add(pb);
-        root.getChildren().add(checkInDatePicker);
+        root.getChildren().add(pagination3);
 
         primaryStage.setScene(scene);
         primaryStage.show();
