@@ -9,6 +9,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -38,12 +39,17 @@ public class Main extends Application {
         StackPane root = new StackPane();
         Scene scene = new Scene(root, 300, 250);
 
-        //Color constant set as the currently selected color
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Open Resource File");
-        fileChooser.showOpenDialog(primaryStage);
+        ObservableList<PieChart.Data> pieChartData =
+                FXCollections.observableArrayList(
+                        new PieChart.Data("Grapefruit", 13),
+                        new PieChart.Data("Oranges", 25),
+                        new PieChart.Data("Plums", 10),
+                        new PieChart.Data("Pears", 22),
+                        new PieChart.Data("Apples", 30));
+        final PieChart chart = new PieChart(pieChartData);
+        chart.setTitle("Imported Fruits");
 
-        // root.getChildren().add(pb);
+        root.getChildren().add(chart);
 
         primaryStage.setScene(scene);
         primaryStage.show();
