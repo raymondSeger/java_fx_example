@@ -42,10 +42,15 @@ public class Main extends Application {
         StackPane root = new StackPane();
         Scene scene = new Scene(root, 300, 250);
 
-        Button buttonColor = new Button("Color");
-        buttonColor.setStyle("-fx-background-color: slateblue; -fx-text-fill: white;");
+        Text t = new Text (10, 20, "This is a text sample");
+        t.setText("This is a text sample");
+        t.setFont(Font.font ("Verdana", 20));
+        t.setFill(Color.RED);
+        t.setId("fancytext");
+        
+        scene.getStylesheets().add(getClass().getResource("/main.css").toExternalForm());
 
-        root.getChildren().add(buttonColor);
+        root.getChildren().add(t);
 
         primaryStage.setScene(scene);
         primaryStage.show();

@@ -23,3 +23,10 @@
 .button:hover {
     -fx-background-color: linear-gradient(#2A5058, #61a2b1);
 }
+
+#fancytext {
+    -fx-font: 100px Tahoma;
+    -fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+    -fx-stroke: black;
+    -fx-stroke-width: 1;
+}
